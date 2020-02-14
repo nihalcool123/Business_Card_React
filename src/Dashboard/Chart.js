@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Card } from "./Card";
 import Highcharts from "highcharts";
 import HighchartsReact from "highcharts-react-official";
+import { chartData } from "./Data";
 
 let options = {
   chart: {
@@ -33,26 +34,10 @@ let options = {
       borderWidth: 0
     },
     column: {
-      stacking: "percent"
+      stacking: "normal"
     }
   },
-  series: [
-    {
-      name: "Phone",
-      data: [5, 3, 4, 7, 2, 1],
-      color: "#60181E"
-    },
-    {
-      name: "Services",
-      data: [2, 2, 3, 2, 1, 1],
-      color: "#DA5862"
-    },
-    {
-      name: "Laptops",
-      data: [3, 4, 4, 2, 5, 1],
-      color: "#EEB5B9"
-    }
-  ]
+  series: chartData
 };
 
 class Chart extends Component {
