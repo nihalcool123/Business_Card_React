@@ -6,18 +6,21 @@ import HighchartsReact from "highcharts-react-official";
 let options = {
   chart: {
     height: "360px",
-    type: "column"
+    type: "column",
+    style: {
+      fontFamily: `'Blinker', sans-serif`
+    }
   },
   title: {
-    text: "Stacked column chart"
+    text: "Revenue by product"
   },
   xAxis: {
-    categories: ["Apples", "Oranges", "Pears", "Grapes", "Bananas"]
+    categories: ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
   },
   yAxis: {
     min: 0,
     title: {
-      text: "Total fruit consumption"
+      text: "Billions($)"
     }
   },
   tooltip: {
@@ -26,22 +29,28 @@ let options = {
     shared: true
   },
   plotOptions: {
+    series: {
+      borderWidth: 0
+    },
     column: {
       stacking: "percent"
     }
   },
   series: [
     {
-      name: "John",
-      data: [5, 3, 4, 7, 2]
+      name: "Phone",
+      data: [5, 3, 4, 7, 2, 1],
+      color: "#60181E"
     },
     {
-      name: "Jane",
-      data: [2, 2, 3, 2, 1]
+      name: "Services",
+      data: [2, 2, 3, 2, 1, 1],
+      color: "#DA5862"
     },
     {
-      name: "Joe",
-      data: [3, 4, 4, 2, 5]
+      name: "Laptops",
+      data: [3, 4, 4, 2, 5, 1],
+      color: "#EEB5B9"
     }
   ]
 };
