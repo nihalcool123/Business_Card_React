@@ -1,3 +1,3 @@
-A business virtualization card based on react..
-Contains dynamic tables and chart...
-:blush:
+A business virtualization card based on react..<br />
+Contains dynamic tables and chart...<br />
+:beer:
